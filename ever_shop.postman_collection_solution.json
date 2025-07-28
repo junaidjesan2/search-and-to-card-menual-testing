@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "d71f4102-0d36-467e-9753-31ad45167a17",
+		"name": "ever shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31546450",
+		"_collection_link": "https://martian-sunset-219448.postman.co/workspace/student_problem~b77c95c3-852d-4599-b957-669225f53c24/collection/31546450-d71f4102-0d36-467e-9753-31ad45167a17?action=share&source=collection_link&creator=31546450"
+	},
+	"item": [
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "view cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://demo.evershop.io/cart?ajax=true",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"cart"
+							],
+							"query": [
+								{
+									"key": "ajax",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search_product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://demo.evershop.io/search?keyword=Nike+react+infinity+run+flyknit&ajax=true",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "Nike+react+infinity+run+flyknit"
+								},
+								{
+									"key": "ajax",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product_details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://demo.evershop.io/nike-react-infinity-run-flyknit-171?ajax=true",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"nike-react-infinity-run-flyknit-171"
+							],
+							"query": [
+								{
+									"key": "ajax",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_to_cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku\": \"NJC44141-Black-L\",\r\n    \"qty\": \"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/cart/mine/items?ajax=true",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"cart",
+								"mine",
+								"items"
+							],
+							"query": [
+								{
+									"key": "ajax",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://demo.evershop.io",
+			"type": "string"
+		}
+	]
+}
